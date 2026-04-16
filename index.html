@@ -18,7 +18,7 @@
         .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 1); }
         
         details summary::-webkit-details-marker { display:none; }
-        details[open] summary i { transform: rotate(180deg); }
+        details[open] summary i.fa-chevron-down { transform: rotate(180deg); }
 
         /* LOGOS */
         .logo-container {
@@ -59,15 +59,15 @@
         <div class="flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
                 <div class="logo-container">
-                    <img src="mti-logo.png" alt="Logo MTI">
+                    <img src="mti-logo.png" alt="Logo MTI" onerror="this.src='https://placehold.co/100x60/1e293b/ffffff?text=MTI'">
                 </div>
-                <div class="h-6 w-px bg-slate-300 mx-2"></div>
+                <div class="h-6 w-px bg-slate-700 mx-2"></div>
                 <h1 class="text-xl font-bold tracking-tight text-white text-center md:text-left">Plan de Acción Multicanal IQL's</h1>
             </div>
             <div class="flex items-center gap-3">
                 <span class="hidden md:inline text-sm font-medium text-slate-500 uppercase tracking-widest">Por Prioridad-Estatus</span>
                 <div class="logo-container">
-                    <img src="Logo Alldora.png" alt="Logo Alldora">
+                    <img src="Logo Alldora.png" alt="Logo Alldora" onerror="this.src='https://placehold.co/120x60/1e293b/ffffff?text=ALLDORA'">
                 </div>
             </div>
         </div>
@@ -140,9 +140,9 @@
                 <div class="space-y-4">
                     <div class="glass-card rounded-2xl p-6 priority-red shadow-sm">
                         <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><i class="fas fa-info-circle text-red-500"></i> Estado Actual</h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm bg-red-50 p-2 rounded border border-red-100 font-medium"><i class="fas fa-check-circle text-red-400"></i> Ya tuvieron reunión</li>
-                            <li class="flex items-center gap-3 text-sm bg-red-50 p-2 rounded border border-red-100 font-medium"><i class="fas fa-clock text-red-400"></i> Proceso Estancado</li>
+                        <ul class="space-y-3 text-sm font-medium">
+                            <li class="flex items-center gap-3 bg-red-50 p-2 rounded border border-red-100"><i class="fas fa-check-circle text-red-400"></i> Ya tuvieron reunión</li>
+                            <li class="flex items-center gap-3 bg-red-50 p-2 rounded border border-red-100"><i class="fas fa-clock text-red-400"></i> Proceso Estancado</li>
                         </ul>
                     </div>
                     
@@ -151,7 +151,7 @@
                         <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-red-100" open>
                             <summary class="flex justify-between items-center p-4 cursor-pointer bg-red-50/30 hover:bg-red-50 transition-colors">
                                 <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-red-500"></i> IQL's Fuente MTI (8)
+                                    <i class="fas fa-database text-red-500"></i> Fuente MTI (8)
                                 </span>
                                 <i class="fas fa-chevron-down text-[10px] text-red-500 transition-transform duration-300"></i>
                             </summary>
@@ -176,7 +176,7 @@
                         <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-slate-200">
                             <summary class="flex justify-between items-center p-4 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
                                 <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-indigo-500"></i> IQL's Fuente Alldora (2)
+                                    <i class="fas fa-database text-indigo-500"></i> Fuente Alldora (2)
                                 </span>
                                 <i class="fas fa-chevron-down text-[10px] text-indigo-500 transition-transform duration-300"></i>
                             </summary>
@@ -196,8 +196,8 @@
                 </div>
 
                 <div class="md:col-span-2 space-y-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full">
-                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-slate-500"></i> Estrategia Multicanal & Ejecución</h4>
+                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full bg-white">
+                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-red-500"></i> Estrategia Multicanal & Ejecución</h4>
                         
                         <div class="relative">
                             <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter">Secuencia de Contacto (Cronograma)</h5>
@@ -245,9 +245,9 @@
                 <div class="space-y-4">
                     <div class="glass-card rounded-2xl p-6 priority-orange shadow-sm">
                         <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><i class="fas fa-info-circle text-orange-500"></i> Estado Actual</h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-star text-orange-400"></i> Interesados Reales</li>
-                            <li class="flex items-center gap-3 text-sm bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-calendar-times text-orange-400"></i> Sin agendamiento</li>
+                        <ul class="space-y-3 text-sm font-medium">
+                            <li class="flex items-center gap-3 bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-star text-orange-400"></i> Interesados Reales</li>
+                            <li class="flex items-center gap-3 bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-calendar-times text-orange-400"></i> Sin agendamiento</li>
                         </ul>
                     </div>
 
@@ -574,8 +574,8 @@
                     <h3 class="text-xl font-bold text-slate-900">Scripts de Contacto Ejecutables</h3>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-blue-700 uppercase mb-2">LinkedIn & Email</h5><p>Enfoque de continuidad basado en interacciones previas.</p></div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-emerald-700 uppercase mb-2">WhatsApp & Teléfono</h5><p>Agilidad en el contacto y manejo de objeciones.</p></div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-blue-700 uppercase mb-2">LinkedIn & Email</h5><p>Enfoque de continuidad basado en interacciones previas. Adaptados por servicio y dolor específico.</p></div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-emerald-700 uppercase mb-2">WhatsApp & Teléfono</h5><p>Agilidad en el contacto para confirmación de agendas, manejo de objeciones y seguimiento cercano.</p></div>
                 </div>
             </section>
             <section class="bg-slate-900 rounded-3xl p-8 shadow-sm text-white">
@@ -588,7 +588,7 @@
             </section>
         </div>
 
-        <!-- NUEVA SECCIÓN: PLANES DE ACCIÓN PERSONALIZADOS (P1) -->
+        <!-- SECCIÓN: PLANES DE ACCIÓN PERSONALIZADOS (P1) -->
         <section id="personalized-plans" class="mt-12 bg-white rounded-3xl p-8 shadow-sm border-2 border-indigo-100">
             <div class="flex items-center gap-4 mb-8">
                 <div class="bg-indigo-600 h-12 w-12 rounded-2xl flex items-center justify-center text-white shadow-lg">
@@ -618,7 +618,7 @@
                         <!-- 1. FICHA COMPLETA -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest">Información Corporativa</h5>
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest flex items-center gap-2"><i class="fas fa-building"></i> Información Corporativa</h5>
                                 <div class="space-y-2 text-sm">
                                     <p><strong>Empresa:</strong> Bulkmatic de México</p>
                                     <p><strong>Industria:</strong> Logística y transporte</p>
@@ -627,7 +627,7 @@
                                 </div>
                             </div>
                             <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest">Contacto Directo</h5>
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest flex items-center gap-2"><i class="fas fa-user-circle"></i> Contacto Directo</h5>
                                 <div class="space-y-1 text-sm leading-snug">
                                     <p class="font-bold text-slate-900">Juan Manuel Coronado Quintero</p>
                                     <p class="text-xs text-slate-500 mb-2">Gerente Jr. de Desarrollo de Sistemas</p>
@@ -659,67 +659,76 @@
                             <div class="relative">
                                 <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-envelope"></i></div>
                                 <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-1')">
-                                    <h6 class="text-xs font-bold text-green-700 uppercase">Día 1 — Email de Reactivación <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Felicitar nuevo rol + caso MPS</p>
+                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 1 — Email Reactivación + Caso <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded ml-2">ACTIVO</span></h6>
+                                    <p class="text-[11px] text-slate-500">Felicitar nuevo rol + compartir caso similar</p>
                                 </div>
                                 <div id="crm-step-1" class="hidden mt-4 bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-4">
-                                    <div class="bg-white p-4 rounded-lg text-sm text-slate-700 italic border shadow-sm">
-                                        
-                                        Asuntos: 1. Felicitaciones por tu nuevo rol/ 2. Juan, esto conecta con lo que vimos en la reunión/3. Juan, retomando lo que vimos + esto te puede interesar
-
-                                        
-                                        
-                                        "Juan, ¿cómo estás?
-                                        
-
-Primero que nada, desde AllDora queríamos felicitarte por tu nuevo rol, seguro vienen varios retos interesantes en esta etapa. Quería retomar la conversación que tuvimos contigo hace un tiempo sobre MPS.
-
-Revisando lo que habíamos visto en ese momento, encontramos un caso reciente que trabaja un escenario muy similar, donde lograron ordenar el soporte, reducir carga operativa del equipo y tener mayor control sin crecer estructura.
-Sentimos que conecta bastante con lo que habíamos conversado contigo y puede darte una referencia mucho más aterrizada.
-                                        
-
-Te lo dejo adjunto para que lo revises con calma.
-                                        
-                                        
-Me cuentas cuando lo puedas ver."
+                                    <div class="bg-white p-4 rounded-lg text-sm text-slate-700 shadow-sm border border-slate-100">
+                                        <div class="mb-4 border-b pb-2">
+                                            <p class="text-[9px] font-bold text-slate-400 uppercase mb-1 tracking-widest italic">Asuntos sugeridos:</p>
+                                            <ul class="text-[11px] font-medium text-indigo-600">
+                                                <li>• Juan, retomando lo que vimos + esto te puede interesar</li>
+                                                <li>• Retomando lo que conversamos contigo</li>
+                                                <li>• Juan, esto conecta con lo que vimos en su momento</li>
+                                            </ul>
+                                        </div>
+                                        <p>Juan, ¿cómo estás?</p>
+                                        <p class="mt-2">Primero que nada, desde AllDora queríamos felicitarte por tu nuevo rol — seguro vienen varios retos interesantes en esta etapa.</p>
+                                        <p class="mt-2">Quería retomar la conversación que tuvimos contigo hace un tiempo sobre MPS.</p>
+                                        <p class="mt-2">Revisando lo que habíamos visto en ese momento, nos hizo sentido compartirte un caso reciente que trabajamos con una operación bastante similar, donde lograron ordenar el soporte, reducir carga operativa del equipo y ganar mayor control sin crecer estructura.</p>
+                                        <p class="mt-2">Sentimos que conecta bastante con lo que habíamos conversado contigo en su momento, y puede servir como referencia más aterrizada.</p>
+                                        <p class="mt-2">Te lo dejo adjunto para que lo revises con calma, y si te hace sentido, lo vemos juntos y lo bajamos a tu operación.</p>
+                                        <div class="mt-4 p-2 bg-slate-50 border border-dashed rounded text-[10px] flex items-center gap-2">
+                                            <i class="fas fa-paperclip"></i> <span>Adjunto: Caso real operativo (Antes vs Después)</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Día 4 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-reply-all"></i></div>
+                                <div class="absolute -left-[60px] top-0 bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-reply-all"></i></div>
                                 <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-4')">
-                                    <h6 class="text-xs font-bold text-yellow-700 uppercase">Día 4 — Email Follow-up <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Seguimiento de disponibilidad</p>
+                                    <h6 class="text-xs font-bold text-purple-700 uppercase tracking-tight">Día 4 — Email Follow-up <span class="bg-purple-100 text-[10px] px-2 py-0.5 rounded ml-2">ACTIVO</span></h6>
+                                    <p class="text-[11px] text-slate-500">Simple y directo</p>
                                 </div>
-                                <div id="crm-step-4" class="hidden mt-4 bg-white border rounded-xl p-6 text-sm italic">
-                                    "¿Pudiste ver el correo con el caso? Tengo disponibilidad martes/jueves por si quieres que retomemos las dudas de la sesión anterior."
+                                <div id="crm-step-4" class="hidden mt-4 bg-white border border-slate-200 rounded-xl p-6 text-[13px] text-slate-700">
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Asunto: ¿Pudiste ver lo que te envié?</p>
+                                    <p>Juan,</p>
+                                    <p class="mt-2">Quería preguntarte si pudiste ver el caso que te compartí.</p>
+                                    <p class="mt-2">La próxima semana tengo disponibilidad martes y jueves, por si quieres que lo veamos juntos y revisamos cómo se podría aplicar a tu operación, además de retomar cualquier duda que haya quedado de la sesión anterior.</p>
                                 </div>
                             </div>
 
                             <!-- Día 7 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-phone"></i></div>
+                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-phone-volume"></i></div>
                                 <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-7')">
-                                    <h6 class="text-xs font-bold text-blue-700 uppercase">Día 7 — Llamada Directa <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Script de aterrizaje operacional</p>
+                                    <h6 class="text-xs font-bold text-yellow-700 uppercase tracking-tight">Día 7 — Llamada Directa <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 ml-2">ACTIVO</span></h6>
+                                    <p class="text-[11px] text-slate-500">Bajar a operación / visita sitio</p>
                                 </div>
-                                <div id="crm-step-7" class="hidden mt-4 bg-slate-50 p-6 rounded-xl border space-y-2">
-                                    <p class="text-xs font-bold">ESC: SÍ VIO CASO:</p>
-                                    <p class="text-sm italic">"Qué bueno. ¿Cuándo agendamos para aterrizar esto a su operación y ver si les puede servir?"</p>
+                                <div id="crm-step-7" class="hidden mt-4 bg-slate-50 border border-slate-200 rounded-xl p-6">
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Objetivo: Reabrir y llevar a acción</p>
+                                    <div class="bg-white p-4 rounded-lg text-sm italic text-slate-800 leading-relaxed">
+                                        "Juan, ¿cómo estás? Te hablo rápido, soy [Nombre] del equipo de AllDora.<br><br>
+                                        Hace un tiempo tuvimos una conversación contigo sobre MPS y estos días retomamos porque encontramos un caso bastante alineado a lo que habíamos visto contigo.<br><br>
+                                        Te enviamos el material por correo y queríamos ver si tiene sentido retomarlo contigo en un espacio breve para bajarlo más a tu operación o incluso verlo en sitio si aplica."
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Día 14 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fab fa-whatsapp"></i></div>
+                                <div class="absolute -left-[60px] top-0 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fab fa-whatsapp"></i></div>
                                 <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-14')">
-                                    <h6 class="text-xs font-bold text-purple-700 uppercase">Día 14 — WhatsApp <span class="bg-purple-100 text-[10px] px-2 py-0.5 rounded text-purple-700 ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Toque final de cercanía</p>
+                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 14 — WhatsApp <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 ml-2">ACTIVO</span></h6>
+                                    <p class="text-[11px] text-slate-500">Último toque de contacto</p>
                                 </div>
-                                <div id="crm-step-14" class="hidden mt-4 bg-purple-50 border border-purple-100 rounded-xl p-6 text-sm italic text-purple-900">
-                                    "Hola Juan, ¿cómo estás? Te escribo porque hace un tiempo tuvimos una conversación sobre el servicio de impresión con Alldora y quería retomar contigo. ¿En qué horario te podría marcar?"
+                                <div id="crm-step-14" class="hidden mt-4 bg-blue-50 border border-blue-100 rounded-xl p-6 text-[13px] text-blue-900 font-medium">
+                                    <p>Hola Juan, ¿cómo estás?</p>
+                                    <p class="mt-2">Te escribo porque intentamos retomar contigo una conversación que tuvimos hace un tiempo sobre el servicio de MPS en AllDora.</p>
+                                    <p class="mt-2">Te compartimos un caso que creemos que puede aplicar bastante a tu operación.</p>
+                                    <p class="mt-2">Quería preguntarte en qué horario te podría marcar para verlo contigo de forma breve.</p>
                                 </div>
                             </div>
 
