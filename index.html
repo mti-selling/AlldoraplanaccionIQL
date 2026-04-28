@@ -20,7 +20,6 @@
         details summary::-webkit-details-marker { display:none; }
         details[open] summary i.fa-chevron-down { transform: rotate(180deg); }
 
-        /* LOGOS */
         .logo-container {
             height: 60px;
             display: flex;
@@ -33,7 +32,6 @@
             object-fit: contain;
         }
 
-        /* Timeline Styles para el plan personalizado */
         .timeline-line::before {
             content: '';
             position: absolute;
@@ -54,7 +52,6 @@
 </head>
 <body class="min-h-screen text-slate-800 pb-20">
 
-    <!-- HEADER SUPERIOR -->
     <header class="bg-slate-900 border-b border-slate-800 px-8 py-4 sticky top-0 z-50 shadow-sm">
         <div class="flex justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
@@ -75,7 +72,6 @@
 
     <main class="max-w-7xl mx-auto p-6 lg:p-8">
         
-        <!-- RESUMEN INICIAL (UNIVERSO) -->
         <section class="mb-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
                 <div class="glass-card p-6 rounded-2xl shadow-sm border-2 border-slate-900 bg-slate-900 text-white flex flex-col justify-between">
@@ -118,7 +114,6 @@
             </div>
         </section>
 
-        <!-- OBJETIVO GENERAL -->
         <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-2xl mb-8 flex flex-col md:flex-row gap-6 items-center">
             <div class="bg-indigo-600 h-12 w-12 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg shadow-indigo-200">
                 <i class="fas fa-bullseye text-xl"></i>
@@ -133,7 +128,7 @@
         <div id="p1" class="tab-content active space-y-8 animate-in fade-in duration-500">
             <div class="flex items-center gap-4 mb-2">
                 <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">🔴 Prioridad 1</span>
-                <h2 class="text-2xl font-bold">10 Clientes: Estrategia de Reactivación</h2>
+                <h2 class="text-2xl font-bold">Leads en Proceso de Reactivación</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -147,83 +142,67 @@
                     </div>
                     
                     <div class="space-y-2">
-                        <!-- FUENTE MTI P1 -->
                         <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-red-100" open>
                             <summary class="flex justify-between items-center p-4 cursor-pointer bg-red-50/30 hover:bg-red-50 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-red-500"></i> Fuente MTI (8)
-                                </span>
+                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2"><i class="fas fa-database text-red-500"></i> Fuente MTI (8)</span>
                                 <i class="fas fa-chevron-down text-[10px] text-red-500 transition-transform duration-300"></i>
                             </summary>
-                            <div class="p-4 bg-white border-t border-red-100">
-                                <ul class="space-y-2 text-[10px] md:text-[11px] font-medium text-slate-700">
+                            <div class="p-4 bg-white border-t border-red-100 font-medium">
+                                <ul class="space-y-2 text-[10px] md:text-[11px] text-slate-700">
                                     <li class="p-2 bg-slate-50 rounded flex justify-between items-center">
-                                        <span><strong>Bulkmatic de México:</strong> Juan Coronado Quintero</span>
-                                        <button onclick="goToPlan('plan-bulkmatic')" class="text-[9px] bg-indigo-600 text-white px-2 py-1 rounded hover:bg-indigo-700 transition-colors shadow-sm">Ver estrategia <i class="fas fa-arrow-down ml-1"></i></button>
+                                        <span><strong>Bulkmatic:</strong> Juan Coronado</span>
+                                        <button onclick="goToPlan('plan-bulkmatic')" class="text-[9px] bg-indigo-600 text-white px-2 py-1 rounded hover:bg-indigo-700">Estrategia <i class="fas fa-arrow-down ml-1"></i></button>
                                     </li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Coliman Bananas - Grupo AGGALL:</strong> Diego Soria</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Corporativo Papelera:</strong> Reynaldo Rosas</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Webasto Group:</strong> Edwin Bolanos Ortega</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Banco Davivienda:</strong> Cristina Montes</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Banco Davivienda:</strong> Johanna Guacaneme</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Formex:</strong> Fernando Sanchez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Corporativo Papelera:</strong> Luis Ogaz</li>
+                                    <li class="p-2 bg-slate-50 rounded flex justify-between items-center">
+                                        <span><strong>Coliman:</strong> Diego Soria</span>
+                                        <button onclick="goToPlan('plan-coliman')" class="text-[9px] bg-indigo-600 text-white px-2 py-1 rounded hover:bg-indigo-700">Estrategia <i class="fas fa-arrow-down ml-1"></i></button>
+                                    </li>
+                                    <li class="p-2 bg-slate-50 rounded flex justify-between items-center">
+                                        <span><strong>GCP Papelera:</strong> Reynaldo Rosas</span>
+                                        <button onclick="goToPlan('plan-reynaldo')" class="text-[9px] bg-indigo-600 text-white px-2 py-1 rounded hover:bg-indigo-700">Estrategia <i class="fas fa-arrow-down ml-1"></i></button>
+                                    </li>
+                                    <li class="p-2 bg-slate-50 rounded flex justify-between items-center border-l-2 border-indigo-400">
+                                        <span><strong>Mitsubishi (ex-Webasto):</strong> E. Bolaños</span>
+                                        <button onclick="goToPlan('plan-edwin')" class="text-[9px] bg-indigo-600 text-white px-2 py-1 rounded hover:bg-indigo-700">Estrategia <i class="fas fa-arrow-down ml-1"></i></button>
+                                    </li>
+                                    <li class="p-2 border-b border-slate-50"><strong>Banco Davivienda:</strong> Cristina Montes</li>
+                                    <li class="p-2 border-b border-slate-50"><strong>Davivienda:</strong> Johanna G.</li>
+                                    <li class="p-2 border-b border-slate-50"><strong>Grupo Formex:</strong> Fernando S.</li>
+                                    <li class="p-2"><strong>GCP Papelera:</strong> Luis Ogaz</li>
                                 </ul>
                             </div>
                         </details>
-
-                        <!-- FUENTE ALLDORA P1 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-slate-200">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-indigo-500"></i> Fuente Alldora (2)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-indigo-500 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-slate-100">
-                                <ul class="space-y-2 text-[10px] md:text-[11px] font-medium text-slate-700">
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>AR Salud Integral:</strong> Juan Carlos Villalobos</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Maquinados Especializados RUSAVE:</strong> René López</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-sm bg-red-900 text-white">
-                        <h4 class="font-bold mb-3 flex items-center gap-2 text-sm uppercase tracking-wider"><i class="fas fa-crosshairs"></i> Objetivo</h4>
-                        <p class="text-sm leading-relaxed opacity-90 font-medium">Reactivar oportunidad y cerrar avance inmediato mediante contacto hiper-personalizado.</p>
                     </div>
                 </div>
 
                 <div class="md:col-span-2 space-y-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full bg-white">
-                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-red-500"></i> Estrategia Multicanal & Ejecución</h4>
-                        
+                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full bg-white font-medium">
+                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-red-500"></i> Estrategia de Prioridad 1</h4>
                         <div class="relative">
-                            <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter">Secuencia de Contacto (Cronograma)</h5>
+                            <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter text-slate-400">Cronograma de Contacto Estándar</h5>
                             <div class="flex flex-wrap gap-4">
                                 <div class="flex flex-col items-center bg-white border border-red-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-red-600 mb-1 uppercase tracking-widest">Día 1</span>
+                                    <span class="text-[10px] font-bold text-red-600 mb-1">Día 1</span>
                                     <i class="fab fa-linkedin text-xl text-blue-600 mb-1"></i>
                                     <span class="text-[10px] text-slate-500 font-semibold">LinkedIn</span>
                                 </div>
                                 <div class="flex flex-col items-center bg-white border border-red-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-red-600 mb-1 uppercase tracking-widest">Día 2</span>
+                                    <span class="text-[10px] font-bold text-red-600 mb-1">Día 2</span>
                                     <i class="fas fa-envelope text-xl text-slate-600 mb-1"></i>
                                     <span class="text-[10px] text-slate-500 font-semibold">Email</span>
                                 </div>
                                 <div class="flex flex-col items-center bg-white border border-red-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-red-600 mb-1 uppercase tracking-widest">Día 4</span>
+                                    <span class="text-[10px] font-bold text-red-600 mb-1">Día 4</span>
                                     <i class="fas fa-phone text-xl text-green-600 mb-1"></i>
                                     <span class="text-[10px] text-slate-500 font-semibold">Llamada</span>
                                 </div>
                                 <div class="flex flex-col items-center bg-white border border-red-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-red-600 mb-1 uppercase tracking-widest">Día 6</span>
+                                    <span class="text-[10px] font-bold text-red-600 mb-1">Día 6</span>
                                     <i class="fab fa-whatsapp text-xl text-emerald-500 mb-1"></i>
                                     <span class="text-[10px] text-slate-500 font-semibold">WhatsApp</span>
                                 </div>
                                 <div class="flex flex-col items-center bg-white border border-red-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-red-600 mb-1 uppercase tracking-widest">Día 8</span>
+                                    <span class="text-[10px] font-bold text-red-600 mb-1">Día 8</span>
                                     <i class="fas fa-sync-alt text-xl text-indigo-500 mb-1"></i>
                                     <span class="text-[10px] text-slate-500 font-semibold">Follow-up</span>
                                 </div>
@@ -234,355 +213,31 @@
             </div>
         </div>
 
-        <!-- PRIORIDAD 2 -->
         <div id="p2" class="tab-content space-y-8 animate-in fade-in duration-500">
             <div class="flex items-center gap-4 mb-2">
                 <span class="bg-orange-100 text-orange-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">🟠 Prioridad 2</span>
                 <h2 class="text-2xl font-bold">8 Clientes: Gestión de Agendamiento</h2>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="space-y-4">
-                    <div class="glass-card rounded-2xl p-6 priority-orange shadow-sm">
-                        <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><i class="fas fa-info-circle text-orange-500"></i> Estado Actual</h4>
-                        <ul class="space-y-3 text-sm font-medium">
-                            <li class="flex items-center gap-3 bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-star text-orange-400"></i> Interesados Reales</li>
-                            <li class="flex items-center gap-3 bg-orange-50 p-2 rounded border border-orange-100 font-medium"><i class="fas fa-calendar-times text-orange-400"></i> Sin agendamiento</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-2">
-                        <!-- FUENTE MTI P2 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-orange-100">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-orange-50/30 hover:bg-orange-50 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-orange-500"></i> IQL's Fuente MTI (6)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-orange-500 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-orange-100">
-                                <ul class="space-y-2 text-[10px] md:text-[11px] font-medium text-slate-700">
-                                      <li class="p-2 bg-slate-50 rounded"><strong>Dicipa:</strong> Javier Cruz Raymundo</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>BOHN : REFRIGERACION:</strong> Alejandro Gudiño</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Difrenosa:</strong> Hugo H.</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Magna International:</strong> Oscar Sanchez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Zobele:</strong> Mario Tirado Gracia</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Farmacia San Pablo:</strong> Luis Avila</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- FUENTE ALLDORA P2 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-slate-100">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-slate-400"></i> IQL's Fuente Alldora (2)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-slate-400 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-slate-100 text-center">
-                               <ul class="space-y-2 text-[10px] md:text-[11px] font-medium text-slate-700">                                    
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>GEPP- PEPSICO:</strong> Dulce Gabriela Flores Hernández</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Grupo Posadas:</strong> Jazmin Rodríguez</li>                                    
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-sm bg-orange-600 text-white">
-                        <h4 class="font-bold mb-3 flex items-center gap-2 text-sm uppercase tracking-wider"><i class="fas fa-crosshairs"></i> Objetivo</h4>
-                        <p class="text-sm leading-relaxed opacity-90 font-medium">Lograr reunión efectiva mediante reducción de fricción y alta personalización.</p>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 space-y-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full">
-                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-slate-500"></i> Estrategia Multicanal & Ejecución</h4>
-                        
-                        <div class="relative">
-                            <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter">Secuencia de Contacto (Cronograma)</h5>
-                            <div class="flex flex-wrap gap-4">
-                                <div class="flex flex-col items-center bg-white border border-orange-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-orange-600 mb-1 uppercase tracking-widest">Día 1</span>
-                                    <i class="fab fa-linkedin text-xl text-blue-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">LinkedIn</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-orange-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-orange-600 mb-1 uppercase tracking-widest">Día 2</span>
-                                    <i class="fas fa-envelope text-xl text-slate-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Email</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-orange-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-orange-600 mb-1 uppercase tracking-widest">Día 4</span>
-                                    <i class="fas fa-phone text-xl text-green-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Llamada</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-orange-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-orange-600 mb-1 uppercase tracking-widest">Día 6</span>
-                                    <i class="fab fa-whatsapp text-xl text-emerald-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">WhatsApp</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-orange-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-orange-600 mb-1 uppercase tracking-widest">Día 8</span>
-                                    <i class="fas fa-sync-alt text-xl text-indigo-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Follow-up</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="glass-card p-8 rounded-2xl">Leads interesados que requieren fijar fecha de reunión técnica.</div>
         </div>
 
-        <!-- PRIORIDAD 3 -->
-        <div id="p3" class="tab-content space-y-8 animate-in fade-in duration-500">
-            <div class="flex items-center gap-4 mb-2">
-                <span class="bg-yellow-100 text-yellow-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">🟡 Prioridad 3</span>
-                <h2 class="text-2xl font-bold">31 Clientes: Conversión a Primera Reunión</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="space-y-4">
-                    <div class="glass-card rounded-2xl p-6 priority-yellow shadow-sm">
-                        <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><i class="fas fa-info-circle text-yellow-500"></i> Estado Actual</h4>
-                        <ul class="space-y-3 text-sm font-medium">
-                            <li class="flex items-center gap-3 bg-yellow-50 p-2 rounded border border-yellow-100 font-medium"><i class="fas fa-ban text-yellow-600"></i> Sin reunión previa</li>
-                            <li class="flex items-center gap-3 text-sm bg-yellow-50 p-2 rounded border border-yellow-100 font-medium"><i class="fas fa-paper-plane text-yellow-600"></i> Con correo personalizado</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-2">
-                        <!-- FUENTE MTI P3 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-yellow-200">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-yellow-50/30 hover:bg-yellow-50 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-yellow-600"></i> IQL's Fuente MTI (20)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-yellow-600 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-yellow-200 max-h-80 overflow-y-auto font-medium text-slate-700">
-                                <ul class="space-y-2 text-[10px] md:text-[11px]">
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Bühler Group:</strong> Oscar Garcia</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Dialight:</strong> Reyes Sánchez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>FDF Latin America:</strong> Luis Morán</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Global Safety Textiles:</strong> José Manuel Lemus Pérez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Logistics:</strong> Juan Francisco Villa</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Morsa de México:</strong> Carlos Sánchez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>HEMAQ:</strong> Luis Treviño</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Landsteiner Scientific:</strong> Horacio Flores Borja</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>POK Castings a Nucor Co.:</strong> Ivan Candelas</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Tamex:</strong> Victor Enrique Garcia Medellin</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Universidad Anáhuac de Cancún:</strong> Luis Lara Su</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Vitesco Technologies:</strong> Jonathan Rosas</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>ICAMI:</strong> Jonathan Barajas</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>HDI Seguros México:</strong> Juan Ignacio Gonzalez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Ojai Alimentos:</strong> Bruno Daniel Reyes</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Cafam:</strong> Yulian Borda</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>cajahuancayo:</strong> Angel Salazar</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>GABAME HUMAN HEALTH:</strong> Ricardo Amezcua Zavala</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Los Cerritos:</strong> Salvador Craules</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Besco MX:</strong> Gustavo González Martínez</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- FUENTE ALLDORA P3 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-slate-200">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-indigo-500"></i> IQL's Fuente Alldora (11)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-indigo-500 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-slate-100 max-h-60 overflow-y-auto font-medium text-slate-700">
-                                <ul class="space-y-2 text-[10px] md:text-[11px]">
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Ericsson:</strong> Cesar Leal</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Siegwerk:</strong> Gustavo Anzures</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>JLL:</strong> Jacobo Tapia</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Seguros Atlas:</strong> Esteban Esquivel Mejía</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Cotemar:</strong> Gerardo Hernández Polanco</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Spin:</strong> Carlos Bravo</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Telcel:</strong> Alberto Ruiz</li>
-                                    <li class="p-2 bg-indigo-50 rounded border-l-2 border-indigo-400"><strong>Schaeffler:</strong> Jonathan Rosas</li>
-                                    <li class="p-2 bg-emerald-50 rounded border-l-2 border-emerald-400"><strong>Grupo Morsa:</strong> Martín Ceniceros</li>
-                                    <li class="p-2 bg-emerald-50 rounded border-l-2 border-emerald-400"><strong>Hemaq:</strong> Enrique Gritzewsky</li>
-                                    <li class="p-2 bg-emerald-50 rounded border-l-2 border-emerald-400"><strong>Landsteiner Scientific:</strong> Omar Garcia Robles</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-sm bg-yellow-500 text-slate-900">
-                        <h4 class="font-bold mb-3 flex items-center gap-2 text-sm uppercase tracking-wider"><i class="fas fa-crosshairs"></i> Objetivo</h4>
-                        <p class="text-sm leading-relaxed font-semibold">Convertir el interés en una reunión inicial de exploración.</p>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 space-y-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full">
-                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-slate-500"></i> Estrategia Multicanal & Ejecución</h4>
-                        
-                        <div class="relative">
-                            <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter">Secuencia de Contacto (Cronograma)</h5>
-                            <div class="flex flex-wrap gap-4">
-                                <div class="flex flex-col items-center bg-white border border-yellow-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-yellow-600 mb-1 uppercase tracking-widest">Día 1</span>
-                                    <i class="fab fa-linkedin text-xl text-blue-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">LinkedIn</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-yellow-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-yellow-600 mb-1 uppercase tracking-widest">Día 2</span>
-                                    <i class="fas fa-envelope text-xl text-slate-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Email</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-yellow-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-yellow-600 mb-1 uppercase tracking-widest">Día 4</span>
-                                    <i class="fas fa-phone text-xl text-green-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Llamada</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-yellow-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-yellow-600 mb-1 uppercase tracking-widest">Día 6</span>
-                                    <i class="fab fa-whatsapp text-xl text-emerald-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">WhatsApp</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-yellow-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-yellow-600 mb-1 uppercase tracking-widest">Día 8</span>
-                                    <i class="fas fa-sync-alt text-xl text-indigo-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Follow-up</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- PRIORIDAD 4 -->
-        <div id="p4" class="tab-content space-y-8 animate-in fade-in duration-500">
-            <div class="flex items-center gap-4 mb-2">
-                <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">🔵 Prioridad 4</span>
-                <h2 class="text-2xl font-bold">18 Clientes: Nutrición y Activación Inicial</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="space-y-4">
-                    <div class="glass-card rounded-2xl p-6 priority-blue shadow-sm">
-                        <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><i class="fas fa-info-circle text-blue-500"></i> Estado Actual</h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm bg-blue-50 p-2 rounded border border-blue-100 font-medium"><i class="fas fa-walking text-blue-400"></i> En Seguimiento</li>
-                            <li class="flex items-center gap-3 text-sm bg-blue-50 p-2 rounded border border-blue-100 font-medium"><i class="fas fa-times-circle text-blue-400"></i> Sin personalización</li>
-                        </ul>
-                    </div>
-
-                    <div class="space-y-2">
-                        <!-- FUENTE MTI P4 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-blue-100">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-blue-50/30 hover:bg-blue-50 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-blue-500"></i> IQL's Fuente MTI (18)
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-blue-500 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-blue-100 max-h-80 overflow-y-auto font-medium text-slate-700">
-                                <ul class="space-y-2 text-[10px] md:text-[11px]">
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Autlán:</strong> Mario Alberto García Báez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>AutoZone:</strong> Angeles Licona</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Banco Sabadell:</strong> Luis Fernando García Z.</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Eaton:</strong> Luis Alba</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Grupo Continental Automotríz:</strong> Roberto Emmanuel Ríos Nájera</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Eaton:</strong> Ivan Morales</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Honeywell:</strong> Juan Manuel Rodríguez Hernández</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Universidad Iberoamericana León:</strong> Luis Fernado Padilla</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Univ. Politécnica Hidalgo:</strong> Gabriel Lemus Lara</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>PROSA:</strong> Liliana Ortiz Sanchez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>AARCO Agente de Seguros:</strong> Carlos Arredondo Reyes</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Medical Life:</strong> Alicia Gomez Ramirez</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>FANOSA:</strong> Martin Robles</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>CLOE:</strong> Edgar Ruiz</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Banco BCP Sucursal Schell:</strong> Alfredo Estrada</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Sunrise Confection S.a. De C.v.:</strong> Javier Mariscal</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>PIMSA Ferreteros Mx:</strong> Juan Duenas Pasten</li>
-                                    <li class="p-2 bg-slate-50 rounded"><strong>Arrow Electronics:</strong> Aldo Aguilar</li>
-                                </ul>
-                            </div>
-                        </details>
-
-                        <!-- FUENTE ALLDORA P4 -->
-                        <details class="glass-card rounded-2xl overflow-hidden shadow-sm group border border-slate-100">
-                            <summary class="flex justify-between items-center p-4 cursor-pointer bg-slate-50 hover:bg-slate-100 transition-colors">
-                                <span class="font-bold text-slate-900 text-xs flex items-center gap-2">
-                                    <i class="fas fa-database text-slate-400"></i> IQL's Fuente Alldora
-                                </span>
-                                <i class="fas fa-chevron-down text-[10px] text-slate-400 transition-transform duration-300"></i>
-                            </summary>
-                            <div class="p-4 bg-white border-t border-slate-100 text-center">
-                                <p class="text-[11px] text-slate-400 italic">Pendiente de nuevos ingresos...</p>
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="glass-card rounded-2xl p-6 shadow-sm bg-blue-600 text-white">
-                        <h4 class="font-bold mb-3 flex items-center gap-2 text-sm uppercase tracking-wider"><i class="fas fa-crosshairs"></i> Objetivo</h4>
-                        <p class="text-sm leading-relaxed opacity-90 font-medium">Generar interés real y establecer una base para futuras conversaciones.</p>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 space-y-6">
-                    <div class="glass-card rounded-2xl p-6 shadow-sm h-full">
-                        <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2 border-b pb-3 uppercase text-sm"><i class="fas fa-chess-knight text-slate-500"></i> Estrategia Multicanal & Ejecución</h4>
-                        
-                        <div class="relative">
-                            <h5 class="text-sm font-bold text-slate-900 mb-6 uppercase tracking-tighter">Secuencia de Contacto (Cronograma)</h5>
-                            <div class="flex flex-wrap gap-4">
-                                <div class="flex flex-col items-center bg-white border border-blue-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-widest">Día 1</span>
-                                    <i class="fab fa-linkedin text-xl text-blue-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">LinkedIn</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-blue-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-widest">Día 2</span>
-                                    <i class="fas fa-envelope text-xl text-slate-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Email</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-blue-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-widest">Día 4</span>
-                                    <i class="fas fa-phone text-xl text-green-600 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Llamada</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-blue-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-widest">Día 6</span>
-                                    <i class="fab fa-whatsapp text-xl text-emerald-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">WhatsApp</span>
-                                </div>
-                                <div class="flex flex-col items-center bg-white border border-blue-200 p-3 rounded-xl shadow-sm w-24">
-                                    <span class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-widest">Día 8</span>
-                                    <i class="fas fa-sync-alt text-xl text-indigo-500 mb-1"></i>
-                                    <span class="text-[10px] text-slate-500 font-semibold">Follow-up</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SCRIPTS Y MATERIALES (UNIVERSAL) -->
+        <!-- SCRIPTS Y MATERIALES -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
             <section class="lg:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="bg-emerald-100 h-10 w-10 rounded-lg flex items-center justify-center text-emerald-600"><i class="fas fa-comment-dots text-lg"></i></div>
                     <h3 class="text-xl font-bold text-slate-900">Scripts de Contacto Ejecutables</h3>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-blue-700 uppercase mb-2">LinkedIn & Email</h5><p>Enfoque de continuidad basado en interacciones previas. Adaptados por servicio y dolor específico.</p></div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-emerald-700 uppercase mb-2">WhatsApp & Teléfono</h5><p>Agilidad en el contacto para confirmación de agendas, manejo de objeciones y seguimiento cercano.</p></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-medium">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-blue-700 uppercase mb-2">LinkedIn & Email</h5><p>Enfoque de continuidad basado en interacciones previas.</p></div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100"><h5 class="font-bold text-emerald-700 uppercase mb-2">WhatsApp & Teléfono</h5><p>Agilidad en el contacto y manejo de agendas.</p></div>
                 </div>
             </section>
             <section class="bg-slate-900 rounded-3xl p-8 shadow-sm text-white">
-                <div class="flex items-center gap-3 mb-6"><i class="fas fa-book-open text-indigo-400"></i><h3 class="text-xl font-bold">Material de Apoyo Estratégico</h3></div>
-                <ul class="space-y-4 text-sm opacity-90">
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-indigo-500 text-xs"></i><span>eBooks (RPA / Gestión / MPS)</span></li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-indigo-500 text-xs"></i><span>Casos de uso por industria</span></li>
+                <div class="flex items-center gap-3 mb-6"><i class="fas fa-book-open text-indigo-400"></i><h3 class="text-xl font-bold">Material de Apoyo</h3></div>
+                <ul class="space-y-4 text-sm font-medium opacity-90">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-indigo-500 text-xs"></i><span>eBooks RPA / Gestión / MPS</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-indigo-500 text-xs"></i><span>Casos de éxito sectoriales</span></li>
                     <li class="flex items-center gap-3"><i class="fas fa-check-circle text-indigo-500 text-xs"></i><span>Resúmenes Ejecutivos</span></li>
                 </ul>
             </section>
@@ -591,165 +246,342 @@
         <!-- SECCIÓN: PLANES DE ACCIÓN PERSONALIZADOS (P1) -->
         <section id="personalized-plans" class="mt-12 bg-white rounded-3xl p-8 shadow-sm border-2 border-indigo-100">
             <div class="flex items-center gap-4 mb-8">
-                <div class="bg-indigo-600 h-12 w-12 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                    <i class="fas fa-user-gear text-xl"></i>
-                </div>
+                <div class="bg-indigo-600 h-12 w-12 rounded-2xl flex items-center justify-center text-white shadow-lg"><i class="fas fa-user-gear text-xl"></i></div>
                 <div>
                     <h3 class="text-2xl font-bold text-slate-900">Planes de Acción Personalizados — Prioridad 1</h3>
-                    <p class="text-sm text-slate-500">Estrategias detalladas por cliente individual</p>
+                    <p class="text-sm text-slate-500 font-medium">Estrategias ejecutivas para leads de alto impacto</p>
                 </div>
             </div>
 
-            <div class="space-y-4">
-                <!-- PLAN BULKMATIC MÉXICO -->
+            <div class="space-y-10">
+                
+                <!-- 1. PLAN BULKMATIC MÉXICO -->
                 <details id="plan-bulkmatic" class="group glass-card rounded-2xl overflow-hidden border border-slate-200 plan-anchor">
                     <summary class="flex justify-between items-center p-6 cursor-pointer bg-slate-50/50 hover:bg-white transition-all">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 font-bold shadow-inner">BM</div>
                             <div>
                                 <h4 class="font-bold text-slate-900">Bulkmatic de México</h4>
-                                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Estrategia de Reactivación — Juan Manuel Coronado Quintero</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Estrategia de Reactivación — Juan Manuel Coronado Quintero</p>
                             </div>
                         </div>
-                        <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
                     </summary>
-                    
-                    <div class="p-8 border-t border-slate-100 bg-white space-y-8">
-                        <!-- 1. FICHA COMPLETA -->
+                    <div class="p-8 border-t border-slate-100 bg-white space-y-8 font-medium">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest flex items-center gap-2"><i class="fas fa-building"></i> Información Corporativa</h5>
-                                <div class="space-y-2 text-sm">
-                                    <p><strong>Empresa:</strong> Bulkmatic de México</p>
-                                    <p><strong>Industria:</strong> Logística y transporte</p>
-                                    <p><strong>Empleados:</strong> 290</p>
-                                    <p><strong>Web:</strong> <a href="https://bulkmatic.com.mx" target="_blank" class="text-blue-600 underline">bulkmatic.com.mx</a></p>
-                                </div>
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Corporativo</h5>
+                                <p class="text-sm font-bold">Bulkmatic de México</p>
+                                <p class="text-xs text-slate-500">Industria: Logística y transporte | Empleados: 290 | Web: bulkmatic.com.mx</p>
                             </div>
                             <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-4 tracking-widest flex items-center gap-2"><i class="fas fa-user-circle"></i> Contacto Directo</h5>
-                                <div class="space-y-1 text-sm leading-snug">
-                                    <p class="font-bold text-slate-900">Juan Manuel Coronado Quintero</p>
-                                    <p class="text-xs text-slate-500 mb-2">Gerente Jr. de Desarrollo de Sistemas</p>
-                                    <p class="text-xs"><strong>Ubicación:</strong> Santa Catarina, Nuevo León</p>
-                                    <p class="text-xs"><strong>Email:</strong> jcoronado@bulkmatic.com.mx</p>
-                                    <p class="text-xs"><strong>Tel:</strong> +52 81 1798 8506</p>
-                                </div>
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Contacto Directo</h5>
+                                <p class="text-sm font-bold">Juan Manuel Coronado Quintero</p>
+                                <p class="text-xs text-slate-500">Gerente Jr. de Desarrollo de Sistemas</p>
+                                <p class="text-xs mt-2"><strong>Tel:</strong> +52 81 1798 8506 | <strong>Email:</strong> jcoronado@bulkmatic.com.mx</p>
                             </div>
                         </div>
-
-                        <!-- 2. INSIGHTS ESTRATÉGICOS -->
-                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 relative overflow-hidden">
-                            <i class="fas fa-lightbulb absolute -right-4 -bottom-4 text-8xl text-amber-200/50"></i>
-                            <h5 class="text-[10px] font-bold text-amber-800 uppercase mb-4 tracking-widest flex items-center gap-2">
-                                <i class="fas fa-brain"></i> Insights Comerciales (Gatillos)
-                            </h5>
-                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-xs font-medium text-amber-900">
-                                <li class="flex items-start gap-2"><i class="fas fa-check-circle mt-0.5 opacity-50"></i> Tuvo reunión previa (conocen Alldora).</li>
-                                <li class="flex items-start gap-2 text-slate-500 line-through"><i class="fas fa-ban mt-0.5"></i> LinkedIn saturado (no usar inicialmente).</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-bolt mt-0.5 text-amber-500"></i> Nuevo cargo reciente (felicitación).</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-print mt-0.5 opacity-50"></i> Interés firme previo en servicio MPS.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-chart-line mt-0.5 opacity-50"></i> Dolor detectado: Carga operativa TI por impresión.</li>
-                                  <li class="flex items-start gap-2"><i class="fas fa-chart-line mt-0.5 opacity-50"></i> Necesitamos un Caso de USO/Éxito.</li>
-                            </ul>
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-xs font-bold text-amber-900">
+                            <h5 class="text-[10px] font-bold text-amber-800 uppercase mb-4 flex items-center gap-2"><i class="fas fa-brain"></i> Insights Comerciales</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li>Tuvo reunión previa (conocen Alldora).</li>
+                                <li>Nuevo cargo reciente → gatillo de reactivación.</li>
+                                <li>Dolor detectado: Carga operativa TI por impresión.</li>
+                                <li class="text-indigo-700">Se requiere caso de uso/éxito como gancho.</li>
+                                <li class="text-slate-400 line-through">LinkedIn saturado (no usar inicialmente).</li>
+                            </div>
                         </div>
-
-                        <!-- 3. TIMELINE PERSONALIZADO -->
-                        <div class="relative timeline-line pl-12 space-y-8">
-                            <!-- Día 1 -->
+                        <div class="relative timeline-line pl-12 space-y-10">
+                            <!-- D1 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-envelope"></i></div>
-                                <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-1')">
-                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 1 — Email Reactivación + Caso <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Felicitar nuevo rol + compartir caso similar</p>
+                                <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white font-bold text-xs">1</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('bm-d1')">
+                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 1 — Email Reactivación + Caso <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded text-green-700 font-bold ml-2">ACTIVO</span></h6>
                                 </div>
-                                <div id="crm-step-1" class="hidden mt-4 bg-slate-50 border border-slate-200 rounded-xl p-6 space-y-4">
-                                    <div class="bg-white p-4 rounded-lg text-sm text-slate-700 shadow-sm border border-slate-100">
-                                        <div class="mb-4 border-b pb-2">
-                                            <p class="text-[9px] font-bold text-slate-400 uppercase mb-1 tracking-widest italic">Asuntos sugeridos:</p>
-                                            <ul class="text-[11px] font-medium text-indigo-600">
-                                                <li>• Juan, felicidades por tu nuevo rol</li>
-                                                <li>• Juan, tenemos un caso similar a lo que vimos en la reunión con Bulkmatic </li>
-                                                <li>• Juan, esto conecta con lo que vimos en la reunión</li>
-                                            </ul>
-                                        </div>
-                                        <p>Juan, ¿cómo estás?</p>
-                                        <p class="mt-2">Primero que nada, desde AllDora queríamos felicitarte por tu nuevo rol — seguro vienen varios retos interesantes en esta etapa.</p>
-                                        <p class="mt-2">Quería retomar la conversación que tuvimos contigo hace un tiempo sobre MPS.</p>
-                                        <p class="mt-2">Revisando lo que habíamos visto en ese momento, nos hizo sentido compartirte un caso reciente que trabajamos con una operación bastante similar, donde lograron ordenar el soporte, reducir carga operativa del equipo y ganar mayor control sin crecer estructura.</p>
-                                        <p class="mt-2">Sentimos que conecta bastante con lo que habíamos conversado contigo en su momento, y puede servir como referencia más aterrizada.</p>
-                                        <p class="mt-2">Te lo dejo adjunto para que lo revises con calma, y si te hace sentido, lo vemos juntos y lo bajamos a tu operación.</p>
-                                        <div class="mt-4 p-2 bg-slate-50 border border-dashed rounded text-[10px] flex items-center gap-2">
-                                            <i class="fas fa-paperclip"></i> <span>Adjunto: Caso real operativo (Antes vs Después)</span>
-                                        </div>
-                                    </div>
+                                <div id="bm-d1" class="hidden mt-4 bg-white border p-6 rounded-xl shadow-sm text-sm italic">
+                                    <p class="font-bold text-indigo-700">Asunto: Juan, felicidades por tu nuevo rol</p>
+                                    "Juan, ¿cómo estás? Felicidades por tu nuevo rol... Quería retomar la conversación sobre MPS. Revisando lo que habíamos visto, nos hizo sentido compartirte un caso reciente donde lograron reducir carga operativa del equipo de TI... Te lo dejo adjunto."
                                 </div>
                             </div>
-
-                            <!-- Día 4 -->
+                            <!-- D4 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-purple-100 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-reply-all"></i></div>
-                                <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-4')">
-                                    <h6 class="text-xs font-bold text-purple-700 uppercase tracking-tight">Día 4 — Email Follow-up <span class="bg-purple-100 text-[10px] px-2 py-0.5 rounded ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Simple y directo</p>
+                                <div class="absolute -left-[60px] top-0 bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white font-bold text-xs">4</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('bm-d4')">
+                                    <h6 class="text-xs font-bold text-purple-700 uppercase tracking-tight">Día 4 — Email Follow-up <span class="bg-purple-100 text-[10px] px-2 py-0.5 rounded text-purple-700 font-bold ml-2">ACTIVO</span></h6>
                                 </div>
-                                <div id="crm-step-4" class="hidden mt-4 bg-white border border-slate-200 rounded-xl p-6 text-[13px] text-slate-700">
-                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Asunto: ¿Pudiste ver lo que te envié?</p>
-                                    <p>Juan,</p>
-                                    <p class="mt-2">Quería preguntarte si pudiste ver el caso que te compartí.</p>
-                                    <p class="mt-2">La próxima semana tengo disponibilidad martes y jueves, por si quieres que lo veamos juntos y revisamos cómo se podría aplicar a tu operación, además de retomar cualquier duda que haya quedado de la sesión anterior.</p>
+                                <div id="bm-d4" class="hidden mt-4 bg-white border p-6 rounded-xl text-sm italic">
+                                    <p class="font-bold text-slate-500">Asunto: ¿Pudiste ver lo que te envié?</p>
+                                    "Juan, ¿pudiste ver el caso que te compartí? La próxima semana tengo disponibilidad martes y jueves por si quieres que lo revisemos juntos."
                                 </div>
                             </div>
-
-                            <!-- Día 7 -->
+                            <!-- D7 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fas fa-phone-volume"></i></div>
-                                <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-7')">
-                                    <h6 class="text-xs font-bold text-yellow-700 uppercase tracking-tight">Día 7 — Llamada Directa <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Bajar a operación / visita sitio</p>
+                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white font-bold text-xs">7</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('bm-d7')">
+                                    <h6 class="text-xs font-bold text-yellow-700 uppercase tracking-tight">Día 7 — Llamada Directa <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 font-bold ml-2">ACTIVO</span></h6>
                                 </div>
-                                <div id="crm-step-7" class="hidden mt-4 bg-slate-50 border border-slate-200 rounded-xl p-6">
-                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-2">Objetivo: Reabrir y llevar a acción</p>
-                                    <div class="bg-white p-4 rounded-lg text-sm italic text-slate-800 leading-relaxed">
-                                        "Juan, ¿cómo estás? Te hablo rápido, soy [Nombre] del equipo de AllDora.<br><br>
-                                        Hace un tiempo tuvimos una conversación contigo sobre MPS y estos días retomamos porque encontramos un caso bastante alineado a lo que habíamos visto contigo.<br><br>
-                                        Te enviamos el material por correo y queríamos ver si tiene sentido retomarlo contigo en un espacio breve para bajarlo más a tu operación o incluso verlo en sitio si aplica."
-                                    </div>
+                                <div id="bm-d7" class="hidden mt-4 bg-slate-50 p-6 rounded-xl text-sm italic">
+                                    "Juan, ¿cómo estás? Te hablo rápido, soy [Nombre] de AllDora... encontramos un caso bastante alineado a lo que vimos contigo... ¿tiene sentido retomarlo en un espacio breve o verlo en sitio si aplica?"
                                 </div>
                             </div>
-
-                            <!-- Día 14 -->
+                            <!-- D14 -->
                             <div class="relative">
-                                <div class="absolute -left-[60px] top-0 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white"><i class="fab fa-whatsapp"></i></div>
-                                <div class="cursor-pointer" onclick="toggleTimelineStep('crm-step-14')">
-                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 14 — WhatsApp <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 ml-2">ACTIVO</span></h6>
-                                    <p class="text-[11px] text-slate-500">Último toque de contacto</p>
+                                <div class="absolute -left-[60px] top-0 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white font-bold text-xs">14</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('bm-d14')">
+                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 14 — WhatsApp <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 font-bold ml-2">ACTIVO</span></h6>
                                 </div>
-                                <div id="crm-step-14" class="hidden mt-4 bg-blue-50 border border-blue-100 rounded-xl p-6 text-[13px] text-blue-900 font-medium">
-                                    <p>Hola Juan, ¿cómo estás?</p>
-                                    <p class="mt-2">Te escribo porque intentamos retomar contigo una conversación que tuvimos hace un tiempo sobre el servicio de MPS en AllDora.</p>
-                                    <p class="mt-2">Te compartimos un caso que creemos que puede aplicar bastante a tu operación.</p>
-                                    <p class="mt-2">Quería preguntarte en qué horario te podría marcar para verlo contigo de forma breve.</p>
+                                <div id="bm-d14" class="hidden mt-4 bg-blue-50 p-6 rounded-xl text-sm italic">
+                                    "Hola Juan, intentamos retomar contigo la conversación sobre MPS. Te compartimos un caso que creemos puede aplicar bastante. ¿En qué horario te podría marcar?"
                                 </div>
-                            </div>
-
-                            <!-- LinkedIn Gris -->
-                            <div class="relative opacity-40 grayscale">
-                                <div class="absolute -left-[60px] top-0 bg-slate-300 text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><i class="fab fa-linkedin-in"></i></div>
-                                <div><h6 class="text-xs font-bold text-slate-600 uppercase">LinkedIn <span class="bg-slate-200 text-[9px] px-2 py-0.5 rounded ml-2">NO USAR</span></h6><p class="text-[10px] text-slate-500">Canal saturado previamente con el lead.</p></div>
                             </div>
                         </div>
                     </div>
                 </details>
 
-                <div class="bg-slate-50 border border-dashed border-slate-200 p-8 rounded-2xl text-center text-slate-400 text-xs italic">
-                    Planes adicionales para Prioridad 1 en fase de desarrollo...
+                <!-- PLAN 2: COLIMAN BANANAS -->
+                <details id="plan-coliman" class="group glass-card rounded-2xl overflow-hidden border border-slate-200 plan-anchor">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer bg-slate-50/50 hover:bg-white transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold shadow-inner">CB</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Coliman Bananas - Grupo AGGALL</h4>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Plan de Reactivación — Diego Soria</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </summary>
+                    <div class="p-8 border-t border-slate-100 bg-white space-y-8 font-medium">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-medium">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-emerald-600 uppercase mb-3 tracking-widest">Corporativo</h5>
+                                <p class="text-sm font-bold">Coliman Bananas - Grupo AGGALL</p>
+                                <p class="text-xs text-slate-500">Industria: Agroindustrial / Logística | Ubicación: Zapopan, Jalisco</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-emerald-600 uppercase mb-3 tracking-widest">Contacto Directo</h5>
+                                <p class="text-sm font-bold">Diego Soria</p>
+                                <p class="text-xs text-slate-500">Gerente de Plataformas Tecnológicas</p>
+                                <p class="text-xs mt-2"><strong>Tel:</strong> +52 662 299 0243 | <strong>Email:</strong> diego.soria@coliman.com</p>
+                            </div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-xs font-bold text-amber-900">
+                            <h5 class="text-[10px] font-bold text-amber-800 uppercase mb-4 flex items-center gap-2"><i class="fas fa-brain"></i> Insights Comerciales</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li>Ya hubo reunión previa; conocen Alldora.</li>
+                                <li>Operación distribuida → alta necesidad de control.</li>
+                                <li>Pausa en el lead; requiere reactivación con valor.</li>
+                                <li class="text-indigo-700">Se requiere caso de uso/éxito como gancho.</li>
+                                <li class="text-slate-400 line-through">LinkedIn sin actividad reciente → NO usar.</li>
+                            </div>
+                        </div>
+                        <div class="relative timeline-line pl-12 space-y-10">
+                            <!-- D1 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 border-white font-bold text-xs">1</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('cs-d1')">
+                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 1 — Email Reactivación + Caso <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded text-green-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="cs-d1" class="hidden mt-4 bg-white border p-6 rounded-xl text-sm italic">
+                                    <p class="font-bold text-indigo-700">Asunto: Diego, retomando lo que vimos en Coliman</p>
+                                    "Diego, ¿cómo estás? Quería retomar la conversación sobre MPS. Encontramos un caso reciente en una operación con varias sedes donde lograron mejorar el control y reducir carga operativa de TI. Te lo dejo adjunto."
+                                </div>
+                            </div>
+                            <!-- D7 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs">7</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('cs-d7')">
+                                    <h6 class="text-xs font-bold text-yellow-700 uppercase tracking-tight">Día 7 — Llamada Directa <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="cs-d7" class="hidden mt-4 bg-slate-50 border p-6 rounded-xl text-sm italic">
+                                    “Diego, ¿cómo estás? Soy [Nombre] de Alldora. Retomamos porque encontramos un caso muy alineado a Coliman. ¿Tiene sentido revisarlo contigo para bajarlo a tu operación?”
+                                </div>
+                            </div>
+                            <!-- D14 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs">14</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('cs-d14')">
+                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 14 — WhatsApp <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="cs-d14" class="hidden mt-4 bg-blue-50 p-6 rounded-xl text-[13px] text-blue-900 font-bold italic shadow-inner">
+                                    "Hola Diego, ¿cómo estás? Intentamos retomar contigo la charla de MPS. Te compartimos un caso que creemos puede aplicar bastante. ¿En qué horario te podría marcar?"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- PLAN 3: GRUPO PAPELERA (REYNALDO ROSAS) -->
+                <details id="plan-reynaldo" class="group glass-card rounded-2xl overflow-hidden border border-slate-200 plan-anchor">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer bg-slate-50/50 hover:bg-white transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 font-bold shadow-inner">RR</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Grupo Corp. Papelera S.A. de C.V.</h4>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Plan Ejecutivo — Reynaldo Rosas</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </summary>
+                    <div class="p-8 border-t border-slate-100 bg-white space-y-8 font-medium">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-medium">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Corporativo</h5>
+                                <p class="text-sm font-bold">Grupo Corporativo Papelera S.A. de C.V.</p>
+                                <p class="text-xs text-slate-500">Industria: Manufactura / Papelera | País: México</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Contacto Directo</h5>
+                                <p class="text-sm font-bold">Reynaldo Rosas</p>
+                                <p class="text-xs text-slate-500">Director de Operaciones (Senior)</p>
+                                <p class="text-xs mt-2"><strong>Email:</strong> reynaldo.rosas@gcp-tissue.com.mx | <strong>Tel:</strong> +52 55 8018 3786</p>
+                            </div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-xs font-bold text-amber-900 leading-relaxed">
+                            <h5 class="text-[10px] font-bold text-amber-800 uppercase mb-4 flex items-center gap-2"><i class="fas fa-brain"></i> Insights Comerciales</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li>Perfil Senior; valora claridad y resultados sobre lo técnico.</li>
+                                <li>Dolor: Control en planta y consumo no controlado en piso.</li>
+                                <li class="text-indigo-700">Se requiere caso de uso/éxito como gancho (impacto real).</li>
+                                <li class="text-slate-400">LinkedIn no prioritario; usar canales directos.</li>
+                            </div>
+                        </div>
+                        <div class="relative timeline-line pl-12 space-y-10">
+                            <!-- D1 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs">1</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('rr-d1')">
+                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 1 — Email Reactivación (Tono Ejecutivo) <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded text-green-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="rr-d1" class="hidden mt-4 bg-white border p-6 rounded-xl text-sm italic">
+                                    <p class="font-bold text-indigo-700">Asunto: Reynaldo, retomando lo que vimos</p>
+                                    "Reynaldo, ¿cómo estás? Quería retomar la conversación sobre MPS. Hemos trabajado con operaciones similares donde lograron mejorar el control en planta y reducir consumos sin impactar la operación. Si te parece, lo vemos brevemente."
+                                </div>
+                            </div>
+                            <!-- D7 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs">7</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('rr-d7')">
+                                    <h6 class="text-xs font-bold text-yellow-700 uppercase tracking-tight">Día 7 — Llamada Directa <span class="bg-yellow-100 text-[10px] px-2 py-0.5 rounded text-yellow-800 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="rr-d7" class="hidden mt-4 bg-slate-50 border p-6 rounded-xl text-sm italic">
+                                    “Reynaldo, ¿cómo estás? Soy [Nombre] de Alldora. Retomamos porque hemos visto mejoras importantes en control en plantas similares. ¿Tiene sentido revisarlo contigo o incluso verlo directamente en planta?”
+                                </div>
+                            </div>
+                            <!-- D14 -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs">14</div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('rr-d14')">
+                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 14 — WhatsApp <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="rr-d14" class="hidden mt-4 bg-blue-50 border border-blue-100 rounded-xl p-6 text-[13px] text-blue-900 font-bold italic shadow-inner">
+                                    "Hola Reynaldo, retomamos la conversación de MPS. Hemos implementado mejoras en eficiencia en plantas similares y creemos podría aportar en su caso. Si te interesa, lo vemos contigo de forma breve."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- PLAN 4: EDWIN BOLAÑOS (MITSUBISHI) -->
+                <details id="plan-edwin" class="group glass-card rounded-2xl overflow-hidden border border-slate-200 plan-anchor">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer bg-slate-50/50 hover:bg-white transition-all">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold shadow-inner">EB</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Mitsubishi Electric Automotive (ex-Webasto)</h4>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest">Continuidad por cambio de rol — Edwin Bolaños</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                    </summary>
+                    <div class="p-8 border-t border-slate-100 bg-white space-y-8 font-medium">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Contexto Estratégico</h5>
+                                <p class="text-sm"><strong>Actual:</strong> Mitsubishi Electric Automotive de México</p>
+                                <p class="text-sm"><strong>Anterior:</strong> Webasto Group (Hubo reunión previa)</p>
+                                <p class="text-xs text-indigo-600 mt-2 font-bold italic">No empezar de cero; trasladar lo visto a la nueva operación.</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                                <h5 class="text-[10px] font-bold text-indigo-600 uppercase mb-3 tracking-widest">Contacto a Recuperar</h5>
+                                <p class="text-sm font-bold">Edwin Bolaños</p>
+                                <p class="text-xs text-slate-500">Perfil IT orientado a eficiencia operativa.</p>
+                                <p class="text-xs mt-2 text-red-600 font-bold"><i class="fas fa-exclamation-triangle"></i> Objetivo: Obtener correo corporativo actualizado.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 text-xs font-bold text-amber-900">
+                            <h5 class="text-[10px] font-bold text-amber-800 uppercase mb-4 flex items-center gap-2"><i class="fas fa-brain"></i> Insights Comerciales</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li>Aprovechar el "cambio de casa" para felicitar y proponer continuidad.</li>
+                                <li>Interés previo validado en Webasto; Mitsubishi tiene retos similares.</li>
+                                <li class="text-indigo-700">Se requiere caso de uso/éxito como gancho para justificar el email.</li>
+                            </div>
+                        </div>
+
+                        <div class="relative timeline-line pl-12 space-y-10">
+                            <!-- D1 LLAMADA -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"><i class="fas fa-phone"></i></div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('eb-d1')">
+                                    <h6 class="text-xs font-bold text-blue-700 uppercase tracking-tight">Día 1 — Llamada (Apertura Clave) <span class="bg-blue-100 text-[10px] px-2 py-0.5 rounded text-blue-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="eb-d1" class="hidden mt-4 bg-slate-50 border p-6 rounded-xl text-sm italic font-medium leading-relaxed">
+                                    “Edwin, ¿cómo estás? Soy [Nombre] de Alldora. Te contacto rápido porque vimos tu cambio — felicidades por Mitsubishi. Queríamos retomar porque en Webasto tuvimos una charla sobre MPS. Con este nuevo rol, pensamos que tiene sentido ver cómo trasladar eso a tu operación actual. ¿Sigue siendo relevante para ti?”
+                                </div>
+                            </div>
+                            <!-- D1 WA -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-emerald-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"><i class="fab fa-whatsapp"></i></div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('eb-wa1')">
+                                    <h6 class="text-xs font-bold text-emerald-700 uppercase tracking-tight">Día 1 — WhatsApp (Si no contesta) <span class="bg-emerald-100 text-[10px] px-2 py-0.5 rounded text-emerald-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="eb-wa1" class="hidden mt-4 bg-white border p-6 rounded-xl text-sm italic shadow-sm">
+                                    "Hola Edwin, ¿cómo estás? Soy [Nombre] de Alldora, te marqué hace un momento. Queríamos retomar contigo por el tema de MPS que vimos en Webasto, ahora en Mitsubishi pensamos que hace sentido revisarlo en este nuevo contexto. Si te parece, lo vemos breve."
+                                </div>
+                            </div>
+                            <!-- D3 WA -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-emerald-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"><i class="fab fa-whatsapp"></i></div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('eb-wa2')">
+                                    <h6 class="text-xs font-bold text-emerald-700 uppercase tracking-tight">Día 3 — WhatsApp (Recuperar Correo) <span class="bg-emerald-100 text-[10px] px-2 py-0.5 rounded text-emerald-700 font-bold ml-2">MOVIMIENTO CLAVE</span></h6>
+                                </div>
+                                <div id="eb-wa2" class="hidden mt-4 bg-white border p-6 rounded-xl text-sm italic font-bold text-indigo-700">
+                                    "Hola Edwin, ¿cómo estás? Justo quería compartirte un par de ejemplos alineados a lo que vimos en su momento contigo. ¿Me compartes tu correo actual para hacértelos llegar?"
+                                </div>
+                            </div>
+                            <!-- D5 EMAIL -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-green-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"><i class="fas fa-envelope"></i></div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('eb-d5')">
+                                    <h6 class="text-xs font-bold text-green-700 uppercase tracking-tight">Día 5 — Email (Ya con contexto) <span class="bg-green-100 text-[10px] px-2 py-0.5 rounded text-green-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="eb-d5" class="hidden mt-4 bg-white border p-6 rounded-xl shadow-sm text-sm leading-relaxed">
+                                    <p class="font-bold text-indigo-700">Asunto: Edwin, retomando lo que vimos en Webasto</p>
+                                    "Hola Edwin, ¿cómo estás? Retomando lo que vimos en Webasto sobre MPS, queremos compartirte un ejemplo reciente donde operaciones similares lograron reducir carga operativa de IT y controlar consumo. Creemos que en Mitsubishi hace todo el sentido revisarlo. Te lo dejo para que lo veas con calma."
+                                </div>
+                            </div>
+                            <!-- D12 WA -->
+                            <div class="relative">
+                                <div class="absolute -left-[60px] top-0 bg-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"><i class="fas fa-flag"></i></div>
+                                <div class="cursor-pointer" onclick="toggleTimelineStep('eb-d12')">
+                                    <h6 class="text-xs font-bold text-red-700 uppercase tracking-tight">Día 12 — WhatsApp (Cierre) <span class="bg-red-100 text-[10px] px-2 py-0.5 rounded text-red-700 font-bold ml-2">ACTIVO</span></h6>
+                                </div>
+                                <div id="eb-d12" class="hidden mt-4 bg-red-50 border p-6 rounded-xl text-sm italic font-bold">
+                                    "Hola Edwin, prometo es mi último mensaje 😊 Solo quería retomar brevemente porque lo de Webasto creemos aplica muy bien en tu operación actual. Si te interesa, con gusto lo vemos en 20 min."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <div class="bg-slate-50 border border-dashed border-slate-200 p-8 rounded-2xl text-center text-slate-400 text-xs italic font-bold">
+                    Esperando datos para los 6 planes personalizados restantes de Prioridad 1...
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="mt-20 border-t border-slate-200 bg-white py-10 px-8 flex justify-between items-center opacity-60 text-[10px] font-bold uppercase tracking-widest">
+    <footer class="mt-20 border-t border-slate-200 bg-white py-10 px-8 flex justify-between items-center opacity-60 text-[10px] font-bold uppercase tracking-widest font-bold">
         <span>© Plan Estratégico IQL Fase 1 — All Rights Reserved</span>
         <div class="flex gap-6"><span>MTI Solutions</span><span>Alldora Corp</span></div>
     </footer>
@@ -758,14 +590,11 @@
         function showTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
         function toggleTimelineStep(stepId) {
             const step = document.getElementById(stepId);
             step.classList.toggle('hidden');
         }
-
         function goToPlan(planId) {
             const planDetails = document.getElementById(planId);
             showTab('p1');
